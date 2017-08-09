@@ -1,0 +1,21 @@
+<html>
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+	<h3>{{restaurant.name}}</h3>
+	<h5>Add Menu Item:</h5>
+	<form method="post">
+		<label>Name of Menu Item: </label>
+		<input type="text" name="item" required />
+		<br>
+		<label>Price</label>
+		<input type="text" name="price" required />
+		<br>
+		<label>Description</label>
+		<input type="text" name="description" />
+		<br>
+		<input type="submit" value="Add" />
+	</form>
+</body>
+</html>

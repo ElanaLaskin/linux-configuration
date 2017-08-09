@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+	<h3>Are you sure you want to delete {{item.name}} ?</h3>
+	<form method="post">
+		<input type="submit" value="Delete"></input>
+	</form>
+</body>
+</html>
