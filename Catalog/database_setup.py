@@ -20,7 +20,7 @@ class Restaurant(Base):
 	__tablename__  = 'restaurant'
 	
 	#Here we create columns, using arguments that we imported on the top.
-	name = Column(String(80), nullable=False)#this means that a row can't be created without this information
+	name = Column(String(80), nullable=False) #this means that a row can't be created without this information
 	id = Column(Integer, primary_key=True)
 	app_user_id = Column(Integer, ForeignKey('app_user.id'))
 	app_user = relationship(User)
