@@ -177,8 +177,8 @@ def gdisconnect():
     h = httplib2.Http()
     result = h.request(url, 'GET')[0]
     
-    # print 'result is '
-    # print result
+    print 'result is '
+    print result
     if result['status'] == '200':
         del login_session['access_token'] 
         del login_session['gplus_id']
@@ -187,8 +187,7 @@ def gdisconnect():
         del login_session['picture']
         response = make_response(json.dumps('Successfully disconnected.'), 200)
         response.headers['Content-Type'] = 'application/json'
-        # return response
-	return render_template('logout.html')
+        return response
     else:
     
         response = make_response(json.dumps('Failed to revoke token for given app_user.', 400))
