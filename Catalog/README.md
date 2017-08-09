@@ -27,3 +27,24 @@ Instructions to run application:
 34.201.153.57:80
 http://34.201.153.57/
 
+## Summary of Software Installed and Configuration Changes ##
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+sudo ufw allow 2200/tcp
+sudo ufw allow www
+sudo ufw allow 2200/ntp
+sudo ufw allow 123/ntp
+sudo ufw allow 123/tcp
+sudo ufw allow ssh
+sudo ufw enable
+sudo ufw deny ssh
+sudo useradd grader
+sudo vi /etc/ssh/sshd_config
+sudo service ssh restart
+sudo a2enmod
+sudo -H pip install sqlalchemy
+sudo apt-get install postgresql
+sudo pip install psycopg2 
+sudo apt-get install git
